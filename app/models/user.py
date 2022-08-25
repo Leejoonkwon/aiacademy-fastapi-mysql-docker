@@ -4,4 +4,4 @@ class User(object):
         self.password = password
         
     def typing(self):
-        return 
+        return print('{self.ID}','{self.password}')

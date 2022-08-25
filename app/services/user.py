@@ -5,5 +5,5 @@ class UserService(object):
         pass
     def typing(self,ID,password):
         typing = User(ID,password)
-        print(f'ID : abc')
-        print(f'password :def')
+        print(f'ID : {typing.ID}')
+        print(f'password :{typing.password}')

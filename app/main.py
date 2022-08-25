@@ -29,10 +29,9 @@ def main():
             calculatorService.calculate(first,second)
         elif menu == '2':
             user = UserService()
-            ID = str('')
-            password = str('')
+            ID = str(input(''))
+            password = str(input(''))
             user.typing(ID,password)
-            break
 if __name__ == '__main__':
     main()
 
