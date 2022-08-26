@@ -7,3 +7,4 @@ class UserService(object):
         typing = User(ID,password)
         print(f'ID : {typing.ID}')
         print(f'password :{typing.password}')
+        
