@@ -12,16 +12,12 @@ from app.services.user import UserService
 # from app.services.classifier import ClassifierService
 from app.services.grade import GradeSerivce
 from app.services.pandas_quiz import PandasQuiz
-from app.services.pandas_random import PandasRandom
-from app.services.content import Content
 def print_menu():
     print("0. 전체프로그램 종료")
     print("1. 계산기 프로그램")
     print("2. 로그인 프로그램") # 입력받은 아이디와 비번만 콘솔에 출력하기
     print("3. 성적표 프로그램") # 입력받은 아이디와 비번만 콘솔에 출력하기
     print("4. Pandas 퀴즈풀기")
-    print("5. Pandas 랜덤생성")
-    print("6. 작성 프로그램")
     menu = input('메뉴 선택')
     return menu
 
@@ -60,23 +56,14 @@ def main():
                     break
                 elif quiz_number == '1':
                     quiz.quiz_1()
-        elif menu == '5' :
-            create = PandasRandom()
-            while 1:
-                random_num = input('랜덤 번호 선택.종료는 0 :')
-                if random_num == '0':
-                    break
-                elif random_num == '1':
-                    create.create()
-        elif menu == '6':    
-            content = Content()
-            while 1:
-                contents = input('점수 선택. 종료는 0 :')
-                if contents == '0':
-                    break
-                elif contents == '1':
-                    content.make()
-                  
+                elif quiz_number == '2':
+                    quiz.quiz_2()
+                elif quiz_number == '3':
+                    quiz.quiz_3()       
+                elif quiz_number == '4':
+                    quiz.quiz_4()
+           
+    
                 
             
 if __name__ == '__main__':  
