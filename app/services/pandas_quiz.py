@@ -95,7 +95,7 @@ ic| df4:        국어  영어  수학  사회
         df6 = pd.DataFrame(self.score(),
                            index = self.id(),
                            columns=['국어', '영어', '수학', '사회'])
-        print(df6.loc[[0]])
+        ic(df6.iloc[[0]])
     '''
     Q7 각 학생들의 점수의 총합과 마지막 행은 과목총점 추가해서 출력
         ic| df5:  국어   영어   수학   사회   과학    총점
@@ -113,14 +113,8 @@ ic| df4:        국어  영어  수학  사회
 '''
     def quiz_7(self):
         random_num = np.random.randint(0,101,(10,5))
-        df_sum1 = random_num.sum(axis=1).reshape(-1,1)
-        df_sum2 = random_num.sum(axis=0).reshape(-1,5)
-        
         df7 = pd.DataFrame(random_num,index=self.id(),
                            columns=['국어','영어','수학','사회','과학'])
-        
-        df9 = pd.DataFrame(df_sum2,index=['과목총점'],columns=['국어',
-                                                           '영어','수학','사회','과학'])
         df7['총점'] = df7['국어'] + df7['영어'] + df7['수학'] + df7['사회'] + df7['과학']
         df7.loc['과목총점']= df7.sum(axis=0)
         ic(df7)
