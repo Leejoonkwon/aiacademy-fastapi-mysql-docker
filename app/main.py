@@ -22,7 +22,7 @@ def print_menu():
     menu = input('메뉴에서 URL을 카피해서 입력하시오\n')
     print(' ###################')
     return menu
-                       
+                          
 def main():
     url = Url()
     while 1:
