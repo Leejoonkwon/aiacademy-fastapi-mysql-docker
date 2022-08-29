@@ -1,8 +1,6 @@
 from app.models.grade import Grade
 class GradeSerivce(object):
-    def __init__(self) -> None:
-        self.credit = 0
-    
+
     def set_score(self,name,kor,eng,math):
         grade = Grade(name,kor,eng,math)
         grade.set_avg()
