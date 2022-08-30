@@ -2,8 +2,9 @@ from app.services.calculator import CalculatorService
 from app.services.user import UserService
 from app.services.grade import GradeSerivce
 from app.services.pandas_quiz import PandasQuiz
+from app.services.ddarung import DDarung
 from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, \
-    QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7
+    QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7 , DDARUNG
 class Url:
     
     def router(self, menu):
@@ -31,5 +32,6 @@ class Url:
             PandasQuiz().quiz_5(subject)
         elif menu == QUIZ_6: PandasQuiz().quiz_6() 
         elif menu == QUIZ_7: PandasQuiz().quiz_7() 
+        elif menu == DDARUNG : DDarung.exec()
             
             
