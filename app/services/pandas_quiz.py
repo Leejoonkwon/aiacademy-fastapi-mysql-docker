@@ -110,12 +110,12 @@ ic| df4:        국어  영어  수학  사회
                  AOQFG   32   50   95    1   52   230
                  jHChe   59   37   80   27   39   242
                  과목총점   547  536  533  319  376  2311
-'''
+''' 
     def quiz_7(self):
         random_num = np.random.randint(0,101,(10,5))
         df7 = pd.DataFrame(random_num,index=self.id(),
                            columns=['국어','영어','수학','사회','과학'])
-        df7['총점'] = df7['국어'] + df7['영어'] + df7['수학'] + df7['사회'] + df7['과학']
+        df7['총점'] = df7.sum(axis=1)
         df7.loc['과목총점']= df7.sum(axis=0)
         ic(df7)
        
