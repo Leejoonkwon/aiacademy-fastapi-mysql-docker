@@ -86,7 +86,7 @@ ic| df4:        국어  영어  수학  사회
         df5 = pd.DataFrame(self.score(),
                            index = self.id(),
                            columns=['국어', '영어', '수학', '사회'])[f'{self.subject}']
-        ic(df5)
+        ic(df5)  
     ''' 
     Q6 원하는 학생점수만 출력하시오. (아이디가 랜덤이므로 맨 위에 학생점수 출력으로 대체함)
         lDZid  57  90  55  24
