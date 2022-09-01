@@ -79,7 +79,7 @@ ic| df4:        국어  영어  수학  사회
         AOQFG    32
         jHChe    59
         Name: 국어, dtype: int64
-        '''
+        '''  
 
     def quiz_5(self,subject):
         self.subject = subject
